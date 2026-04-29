@@ -340,7 +340,9 @@ footer {
 .footer-links a:hover { color: rgba(255,255,255,0.8); }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); font-weight: 500; }
 
-@media (max-width: 700px) {
+.pricing-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .pricing-grid > div:last-child { grid-column: 1 / -1; }
+  @media (max-width: 700px) {
   nav { padding: 14px 20px; }
   .proof-bar { gap: 16px; padding: 14px 20px; }
   .modes-grid, .steps-grid { grid-template-columns: 1fr; }
@@ -450,7 +452,7 @@ footer {
   <div class="section-title">A Plan for Every Reseller.</div>
   <div class="section-sub" style="margin-bottom: 40px;">Start free, buy credits as you go, or go unlimited.</div>
   <div style="max-width:900px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;" class="pricing-grid">
 
       <div style="background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 20px;text-align:center;">
         <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0f1f3d;margin-bottom:12px;">Free</div>
